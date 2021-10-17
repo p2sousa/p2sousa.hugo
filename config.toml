@@ -1,0 +1,124 @@
+baseURL = "http://example.org/"
+defaultContentLanguage = "en"
+languageCode = "en"
+title = "Pablo Sousa - Software Engineer"
+theme = "LoveIt"
+
+[params]
+  #  LoveIt theme version
+  version = "0.2.X"
+  description = "Software Engineer with over 7 years of experience, mainly APIs and web services."
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "dark"
+  #  date format
+  dateFormat = "2006-01-02"
+  favicon = "favicon.ico"
+
+  # Header config
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
+    #  Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+
+  # Footer config
+  [params.footer]
+    enable = true
+    #  whether to show Hugo and theme info
+    hugo = true
+    #  whether to show copyright info
+    copyright = true
+    #  whether to show the author
+    author = true
+    # Site creation time
+    since = 2021
+    # license info (HTML format is supported)
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # Home page config
+  [params.home]
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # URL of avatar shown in home page
+      avatarURL = "/profile.jpeg"
+      #  title shown in home page (HTML format is supported)
+      title = "Software Engineer"
+      # subtitle shown in home page
+      subtitle = "Eu sou um eterno aprendiz que adora codar e compartilhar conhecimento."
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      #  disclaimer (HTML format is supported)
+      disclaimer = "<p>Ol&aacute;, me chamo Pablo Sousa!</p><p>Prazer em te conhecer 💙.</p><p>Em primeiro lugar, gostaria de dizer que adoro aprender e compartilhar conhecimento, gosto de estudar e aprender coisas novas, seja relacionado a tecnologia ou n&atilde;o.</p><p>Iniciei minha carreira como desenvolvedor em 2014, quando ainda estava fazendo minha gradua&ccedil;&atilde;o em Analise e Desenvolvimento de Sistemas. At&eacute; o momento, atuei principalmente como Desenvolvedor Backend, utilizando diversas linguagens, sendo as principais: PHP, Javascript/Typescript, Golang.</p><p>Atualmente estou aprimorando meus conhecimentos tecnicos em observabilidade/monitoramento e arquitetura de software enquanto planejo me desenvolver como L&iacute;der.</p><p>Se quiser entrar em contato comigo basta me seguir nas redes que deixei disponivel logo acima, ficarei muito feliz em conversar com voc&ecirc;.</p>"
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+      #  replaced with hiddenFromHomePage in params.page
+      # default behavior when you don't set "hiddenFromHomePage" in front matter
+      defaultHiddenFromHomePage = false
+
+  # Social config about the author
+  [params.social]
+    GitHub = "p2sousa"
+    Linkedin = "p2sousa"
+    Medium = "@p2sousa"
+    Email = "pablosousa.ads@gmail.com"
+
+  #  TypeIt config
+  [params.typeit]
+    # typing speed between each step (measured in milliseconds)
+    speed = 100
+    # blinking speed of the cursor (measured in milliseconds)
+    cursorSpeed = 1000
+    # character used for the cursor (HTML format is supported)
+    cursorChar = "|"
+    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+    duration = -1
+
+  #  Analytics config
+  [params.analytics]
+    enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = ""
+      # whether to anonymize IP
+      anonymizeIP = true
+
+# Markup related config in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+
+# Author config
+[author]
+  name = "Pablo Sousa"
+  email = "pablosousa.ads@gmail.com"
+  link = ""
+
+# Options to make output .md files
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+# Options to make output .md files
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+# Options to make hugo output files
+[outputs]
+  #
+  home = ["HTML"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML"]
